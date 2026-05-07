@@ -20,6 +20,15 @@ namespace NotificationApp.Services
         public void Send(string message)
         {
             _logger.LogInfo($"Отправка SMS: {message}");
+
+            Random random = new Random();
+            if (random.Next(1, 5) == 1)
+            {
+                throw new Exception("Не удалось отправить уведомление");
+            }
+
+            _logger.LogInfo($"SMS успешно отправлен: {message}");
         }
+
     }
 }

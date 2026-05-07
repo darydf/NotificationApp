@@ -9,6 +9,6 @@ namespace NotificationApp.Services
     public interface INotificationService
     {
         string ServiceType {  get; }
-        void Send(string messege);
+        void Send(string message);
     }
 }
